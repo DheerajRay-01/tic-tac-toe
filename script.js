@@ -6,7 +6,7 @@ let newG = document.querySelector(".new")
 let boxes =  document.querySelectorAll(".boxes")
 cnt = 0;
 bool = 1;
-win = 0
+win = 0;
 console.log(boxes);
 let arr = {
     box1 : -1,
@@ -46,6 +46,7 @@ function showwinner(){
     winName.innerHTML = `<i class="fa-solid fa-trophy winic"></i> Player '${winner}' won <i class="winic fa-solid fa-award"></i>`
     }
     msg.classList.remove("hide")
+    win = 0;
     return
 }
 
@@ -84,6 +85,7 @@ function check(){
     return 0
 }
 function newGame(){
+    winName.classList.add("hide")
     msg.classList.add("hide")
     newG.classList.add("hide")
     cnt = 0;
